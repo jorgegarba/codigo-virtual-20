@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				background-color: #444;
+				color: #eee;
+				font-family: sans-serif;
+			}
+			code {
+				font-family: consolas;
+				color: yellow;
+			}
+			/* tfoot > tr > td:nth-child(1) {
+				border: none;
+				border-left: 0;
+				border-bottom: 0;
+			} */
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Tablas</h1>
+		</header>
+		<main>
+			<section>
+				<h2>Filas y Columnas</h2>
+				<p>Las tablas se colocan dentro de una etiqueta <code>table</code></p>
+				<p>Las tablas tienen 3 partes</p>
+				<ul>
+					<li><code>thead</code>: Cabecera</li>
+					<li><code>tbody</code>: Cuerpo</li>
+					<li><code>tfoot</code>: Pie de tabla</li>
+				</ul>
+			</section>
+			<hr />
+			<section>
+				<h2>Tabla simple</h2>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Cantidad</th>
+							<th>Descripción</th>
+							<th>P. Unitario</th>
+							<th>P. Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2</td>
+							<td>Teclado mecánico Fanatic Vanquish</td>
+							<td>S/ 200.00</td>
+							<td>S/ 400.00</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Monitor widescreen Samsung</td>
+							<td>S/ 800.00</td>
+							<td>S/ 800.00</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Mouse HyperX</td>
+							<td>S/ 180.00</td>
+							<td>S/ 180.00</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td align="center" colspan="3">TOTAL</td>
+							<td>S/ 1380.00</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			<hr />
+			<section>
+				<h2>Combinando filas</h2>
+				<p>Para combinar filas se usa el atributo <code>rowspan</code></p>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Categoría</th>
+							<th>Etiquetas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="5">izquierda 1</td>
+							<td>derecha 1</td>
+						</tr>
+						<tr>
+							<td>derecha 2</td>
+						</tr>
+						<tr>
+							<td>derecha 3</td>
+						</tr>
+						<tr>
+							<td>derecha 4</td>
+						</tr>
+						<tr>
+							<td>derecha 5</td>
+						</tr>
+						<tr>
+							<td rowspan="5">izquierda 6</td>
+							<td>derecha 6</td>
+						</tr>
+						<tr>
+							<td>derecha 7</td>
+						</tr>
+						<tr>
+							<td>derecha 8</td>
+						</tr>
+						<tr>
+							<td>derecha 9</td>
+						</tr>
+						<tr>
+							<td>derecha 10</td>
+						</tr>
+						<tr>
+							<td rowspan="6">izquierda 11</td>
+							<td>derecha 11</td>
+						</tr>
+						<tr>
+							<td>derecha 12</td>
+						</tr>
+						<tr>
+							<td>derecha 13</td>
+						</tr>
+						<tr>
+							<td>derecha 14</td>
+						</tr>
+						<tr>
+							<td>derecha 15</td>
+						</tr>
+						<tr>
+							<td>derecha 16</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr />
+			<section>
+				<h2>Ejercicio</h2>
+				<table border="1">
+					<tbody>
+						<tr>
+							<td rowspan="5">supermercados</td>
+							<td></td>
+							<td>25/04/2022</td>
+						</tr>
+						<tr>
+							<td colspan="2">N° Factura 25611</td>
+						</tr>
+						<tr>
+							<td>Cliente:</td>
+							<td rowspan="3">
+								Jorge Garnica <br />
+								16354354354 <br />
+								Dirección
+							</td>
+						</tr>
+						<tr>
+							<td>RUC:</td>
+						</tr>
+						<tr>
+							<td>Dirección</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+	</body>
+</html>
