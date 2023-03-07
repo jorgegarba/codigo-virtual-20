@@ -6,15 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 			body {
-				color: #eee;
-				background-color: #222;
+				color: rgb(240, 240, 240);
+				background-color: #222222;
+				font-family: 'Roboto', sans-serif;
 			}
 			section {
 				font-size: 20px;
 			}
 			p {
 				font-size: 36px;
+				border: 1px solid pink;
 			}
 			/* todos los elementos de clase "rojo" que sean descendientes(en cualquier nivel)  de la clase "grande" */
 			.grande .rojo {
@@ -24,9 +27,26 @@
 			ul > li {
 				border: 1px solid yellow;
 			}
+
+			ol li:nth-child(2) {
+				border: 1px solid green;
+			}
+
+			h1 {
+				font-weight: 100;
+				text-align: center;
+			}
+			h2 {
+				text-align: right;
+				border: 1px solid blue;
+			}
+			a {
+				text-decoration: none;
+			}
 		</style>
 	</head>
 	<body>
+		<h1>Estilos CSS</h1>
 		<section>
 			<p>texto del parrafo</p>
 			texto fuera del párrafo
@@ -41,7 +61,16 @@
 				</ol>
 				<li>Python</li>
 				<li>TypeScript</li>
+				<li>
+					<a href="">ver mas</a>
+				</li>
 			</ul>
+		</section>
+		<section>
+			<h2>
+				algo aquí
+				<p>un parrafo pequeño</p>
+			</h2>
 		</section>
 	</body>
 </html>
