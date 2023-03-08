@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				box-sizing: border-box;
+				padding: 0;
+			}
+			body {
+				background: #6eb4ac;
+			}
+			.card {
+				height: 200px;
+				width: 250px;
+				margin-left: auto;
+				margin-right: auto;
+				/* border: 1px solid #ccc; */
+				/* box-shadow: #bbb 0px 0px 16px ; */
+				/* border-radius: 8px; */
+				margin-top: 50px;
+				padding: 16px;
+
+				border-radius: 24px;
+				background: #6eb4ac;
+				box-shadow: -11px -11px 22px #2c4845, 11px 11px 22px #b0ffff;
+			}
+			.caja-gradiente {
+				height: 300px;
+				background-image: -webkit-linear-gradient(top left, #f45b67, #f4aaaa);
+			}
+			.caja-gradiente-2 {
+				height: 500px;
+				background: #333333; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#dd1818,
+					#333333
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#dd1818,
+					#333333
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+			.caja-blur {
+				filter: blur(5px);
+				cursor: pointer;
+			}
+			.caja-blur:hover {
+				filter: blur(0px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam minus
+			commodi nihil asperiores ab dolorum sit, quis eaque quisquam reiciendis
+			optio sequi, hic porro cum totam labore voluptate rerum repellat!
+		</div>
+		<div class="caja-gradiente"></div>
+		<div class="caja-gradiente-2"></div>
+		<div class="caja-blur">
+			<img src="./textura.png" alt="" />
+		</div>
+	</body>
+</html>

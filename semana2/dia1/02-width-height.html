@@ -9,21 +9,56 @@
 			* {
 				margin: 0;
 				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				background-color: #cccccc;
+				border: 5px solid peru;
+				height: 100vh;
 			}
 			.caja-1 {
 				border: 1px solid red;
 				width: 200px;
-        height: 100px;
+				height: 100px;
+				/* overflow: hidden; */
+				/* overflow-y: scroll; */
+				overflow-x: scroll;
+				overflow-y: hidden;
+				word-wrap: break-word;
 			}
 			.span-1 {
 				border: 1px solid blue;
 				width: 200px;
 				height: 100px;
 			}
+			.caja-2 {
+				border: 1px solid white;
+				height: 100px;
+				width: 200px;
+				overflow-x: scroll;
+			}
+			.parrafo-grande {
+				width: 300px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="caja-1">algo de contenido</div>
+		<div class="caja-1">
+			algo de co asd
+			sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+			asd as d asd sntenido mas contenido y mas contenido Lorem ipsum dolor, sit
+			amet consectetur adipisicing elit. Molestiae, nemo distinctio, deleniti a
+			autem eaque alias laboriosam, vitae delectus eius recusandae at sequi
+			reprehenderit itaque aliquam atque praesentium minus illum!
+		</div>
 		<span class="span-1">un span</span>
+		<div class="caja-2">
+			<p class="parrafo-grande">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum ad nisi
+				aliquam nesciunt dolorum, sit et minus consequatur vel numquam ex
+				perspiciatis! Maxime suscipit expedita facere minus ea, labore
+				reprehenderit.
+			</p>
+		</div>
 	</body>
 </html>
