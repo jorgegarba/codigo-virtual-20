@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+body {
+	height: 2000px;
+}
+
+.caja-1,
+.caja-2 {
+	width: 100px;
+	height: 100px;
+}
+.action-button {
+	background-color: aqua;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.caja-1 {
+	border: 1px solid red;
+	left: calc(50% - 50px);
+	position: relative;
+	top: 15px;
+}
+.caja-2 {
+	border: 1px solid purple;
+	position: relative;
+}
+
+.circulo-2 {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid black;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

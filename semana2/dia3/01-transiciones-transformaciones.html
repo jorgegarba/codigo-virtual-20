@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				box-sizing: border-box;
+				padding: 0;
+			}
+			a {
+				text-decoration: none;
+				color: #444;
+				font-family: sans-serif;
+			}
+			.caja-1 {
+				height: 100px;
+				width: 100px;
+				border: 1px solid red;
+				border-radius: 5px;
+				transition: all 1s ease-in-out 0s;
+				/* transform: scale(1.2); */
+			}
+			.caja-1:hover {
+				transform: scale(1.2);
+				background-color: red;
+			}
+			.bolita-1,
+			.bolita-2 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+			}
+			.bolita-1 {
+				transition: all 2s ease-in 0s;
+			}
+			.bolita-2 {
+				transition: all 2s ease-out 0s;
+			}
+			.fondo-rojo {
+				background-color: red;
+			}
+			.fondo-morado {
+				background-color: purple;
+			}
+			.padre {
+				background-color: #ccc;
+			}
+			/* el efecto sólo afecta al elemento de clase
+      .bolita-1 que es descendiente del elemento 
+      de clase .padre SI Y SOLO SI el elemento de
+      clase .padre tiene el estado hover */
+			.padre:hover .bolita-1 {
+				transform: translate(700px, 0px);
+			}
+			.padre:hover .bolita-2 {
+				transform: translate(700px, 0px);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">Nosotros</a>
+		<div class="caja-1"></div>
+		<div class="padre">
+			<div class="bolita-1 fondo-rojo"></div>
+			<div class="bolita-2 fondo-morado"></div>
+		</div>
+	</body>
+</html>
+
+<!-- 
+  al hacer hover:
+  - las dos bolitas se trasladan 500px a la derecha
+  - HINT: encerrar ambas bolitas en un div padre
+  - el hover debe afectar al div padre y no a las bolitas
+
+  - hacer el selector hover de la siguiente forma:
+
+  .div-padre:hover .bolita-1{
+    efecto
+  }
+  .div-padre:hover .bolita-2{
+    efecto
+  }
+
+  usar transform: translate(500px, 0px) en cada hover
+ -->
