@@ -1,0 +1,31 @@
+.papa{
+    display: flex;
+    margin: 5px;
+}
+
+div{
+    margin: 5px;
+}
+/* estoe el header  */
+ .main-navegacion{
+    display: flex;
+    justify-content: space-between;
+ }
+ /* section caja */
+
+ .papa-box{
+    height: 50vh;
+    border: solid orange 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 8px;
+ }
