@@ -16,7 +16,7 @@ body{
     /* una animacion esta compuesta por un nombre y un tiempo */
     animation-name: texto-volador;
     animation-duration: 12s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 2;
     border: solid;
 }
 
@@ -39,7 +39,7 @@ body{
 
 /* paso1 -nombras la animacion y su duration */
 
-.image-animada{
+/* .image-animada{
     animation-name: image-resize;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -57,4 +57,52 @@ body{
         height: 400px;
     }
 
+} */
+
+.box-uno{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name: box-animation;
+    animation-duration: 10s;
+    background-size: ;
 }
+
+@keyframes box-animation{
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: sandybrown;
+    }
+    50%{
+        background-color: rgb(34,0,128);
+    }
+    75%{
+        background-color: blueviolet;
+    }
+    100%{
+        background-color: green;
+    }
+
+}
+/* ball uno */
+/* .ball-uno{
+    height: 100px;
+    width: 100px;
+    border: solid green 2px;
+    border-radius: 50%;
+    animation-name: ball-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    background-color: blue;
+}
+
+@keyframes ball-animation{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-130px);
+    }
+} */
