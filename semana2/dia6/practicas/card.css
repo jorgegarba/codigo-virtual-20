@@ -12,7 +12,7 @@ body{
 
 .giratorio{
     background-color: transparent;
-    width: 300px;
+    width: 350px;
     height: 200px;
     perspective: 1000px;
 }
@@ -45,6 +45,7 @@ body{
 
 .contenido-frente{
     background: linear-gradient(#0093E9,#80D0C7,red);
+    color: #fff;
 }
 
 .contenido-trasero{
@@ -68,3 +69,4 @@ body{
     height: 70px;
     filter: drop-shadow(2px 2px 5px #000);
 }
+
