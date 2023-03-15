@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+:root {
+	--width-desktop: 1440px;
+	--color-primary: hsl(180, 66%, 49%);
+	--color-gray: hsl(0, 0%, 75%);
+	--color-gray-violet: hsl(257, 7%, 63%);
+	--color-dark-violet: hsl(257, 27%, 26%);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	padding-top: 50px;
+	font-size: 18px;
+}
+
+button {
+	font-size: 18px;
+	border: none;
+	background-color: unset;
+	outline: none;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+ul {
+	list-style: none;
+}
+
+.bg-gray {
+	background-color: hsl(230deg 25% 95.29%);
+}
+
+.action-button {
+	padding: 8px 12px;
+	background-color: var(--color-primary);
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+/* BEGIN HEADER */
+.header {
+	max-width: var(--width-desktop);
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.header__logo {
+	width: 150px;
+}
+.header__logo img {
+	width: 100%;
+	display: block;
+}
+.header__nav {
+	flex: 1;
+}
+
+.header__login {
+	color: var(--color-gray);
+	font-weight: 700;
+}
+.header__signup {
+	margin-left: 12px;
+}
+
+.header__links {
+	display: flex;
+	padding-left: 50px;
+	gap: 30px;
+}
+
+.header__link a {
+	color: var(--color-gray);
+}
+/* END HEADER */
+
+.main {
+	background-image: url('./../images/illustration-working.svg');
+	background-repeat: no-repeat;
+	/* background-position: X Y */
+	background-position: 100% 0;
+	background-size: 50%;
+	/* TODO controlar altura de imagen */
+}
+
+/* BEGIN HERO */
+
+.main__hero {
+	max-width: var(--width-desktop);
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+.main__hero-title {
+	width: 50%;
+	padding-top: 50px;
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 90px;
+	margin-bottom: 15px;
+}
+
+.main__hero-description {
+	margin-bottom: 30px;
+	color: var(--color-gray-violet);
+	padding-right: 220px;
+}
+
+.main__features {
+	max-width: var(--width-desktop);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main__features-search {
+	height: 150px;
+	background-color: var(--color-dark-violet);
+	background-image: url('./../images/bg-shorten-desktop.svg');
+	background-size: cover;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	padding: 50px;
+	gap: 20px;
+}
+
+.main__features-search input {
+	flex: 1;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.main__features-search button {
+	height: 100%;
+	border-radius: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/* END HERO */
