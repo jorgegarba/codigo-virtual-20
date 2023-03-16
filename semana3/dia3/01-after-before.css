@@ -1,0 +1,13 @@
+p::before {
+	content: '';
+	display: block;
+	border: 1px solid red;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+}
+p {
+	position: relative;
+	background-color: burlywood;
+}
