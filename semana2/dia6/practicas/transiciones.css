@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    color: #fff;
+}
+
+section{
+    margin-top: 4rem;
+    display: flex;
+    width: 700px;
+    height: 500px;
+   
+}
+
+section img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+   
+}
+
+section img:hover{
+    cursor:grab;
+    width: 200px;
+    filter: contrast(120%);
+    
+
+}
