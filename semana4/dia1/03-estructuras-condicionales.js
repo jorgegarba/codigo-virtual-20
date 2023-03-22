@@ -41,3 +41,11 @@ if (dia === 'martes') {
 }
 
 console.log('Total a pagar', resultado);
+
+console.log('----------- operador and &&');
+
+if (dia === 'martes' && totalComprado > 1000) {
+	resultado = totalComprado - totalComprado * 0.15;
+} else {
+	console.log('No califica');
+}
