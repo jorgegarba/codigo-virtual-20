@@ -42,3 +42,42 @@ if (nroAlumnos >= 100) {
 }
 
 console.log('Total a pagar por ' + nroAlumnos + ': S/' + costoBus);
+
+/**
+ * Ejercicio propuesto 3.9
+ */
+console.log('--- Ejercicio 3.9 ---');
+const planA = 1200;
+const planB = 950;
+let totalPagar = 0;
+const planElegido = prompt('¿qué plan desea? escriba a (Plan A) ó b (PlanB)');
+const alcohol = confirm('¿Toma alcohol?');
+const lentes = confirm('¿Usted usa lentes?');
+const enfermedad = confirm('¿Padece usted de alguna enfermedad?');
+const edad = +prompt('Ingrese su edad');
+let precioBase = 0;
+
+if (planElegido === 'a') {
+	precioBase = planA;
+} else {
+	precioBase = planB;
+}
+totalPagar = precioBase;
+
+if (alcohol) {
+	totalPagar = totalPagar + 0.1 * precioBase;
+}
+if (lentes) {
+	totalPagar = totalPagar + 0.05 * precioBase;
+}
+if (enfermedad) {
+	totalPagar = totalPagar + 0.05 * precioBase;
+}
+
+if (edad > 40) {
+	totalPagar = totalPagar + 0.2 * precioBase;
+} else {
+	totalPagar = totalPagar + 0.1 * precioBase;
+}
+
+console.log('Su cuenta joven: ' + totalPagar + ' soles');
