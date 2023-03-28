@@ -34,7 +34,12 @@ console.log('vehiculo1', vehiculo);
 console.log('vehiculo2', vehiculo2);
 
 // Función que crea objetos
-function creadorDeVehiculos(pMarca, pModelo, pAnio, pMantenimientos) {
+function creadorDeVehiculos(
+	pMarca = '',
+	pModelo = '',
+	pAnio = 0,
+	pMantenimientos = []
+) {
 	const vehiculoGenerico = {
 		marca: pMarca,
 		modelo: pModelo,
@@ -44,8 +49,28 @@ function creadorDeVehiculos(pMarca, pModelo, pAnio, pMantenimientos) {
 	return vehiculoGenerico;
 }
 
-const mazdaCX3 = creadorDeVehiculos('Mazda', 'CX3', 2023, []);
+// función creadora de mantenimientos con los siguientes atributos
+/**
+ * fecha: ""
+ * kilometraje: 0
+ * aceite:false
+ */
+
+function mantenimiento(pFecha = '', pKilometraje = 0, pAceite = false) {
+	return {
+		fecha: pFecha,
+		kilometraje: pKilometraje,
+		aceite: pAceite
+	};
+}
+
+const mazdaCX3 = creadorDeVehiculos('Mazda', 'CX3', 2023, [
+	mantenimiento('05/05/23', 15000, true),
+	mantenimiento('05/05/24', 25000, true)
+]);
 const bmwX4 = creadorDeVehiculos('BMW', 'X4', 2021, []);
+const mercedesGLA450 = creadorDeVehiculos();
 
 console.log('mazda', mazdaCX3);
 console.log('bmw', bmwX4);
+console.log('mercedesGLA450', mercedesGLA450);
