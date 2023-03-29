@@ -51,4 +51,4 @@ console.log('Random entre 50 y 850', Math.random() * (850 - 50) + 50);
 
 const random = (min, max) => Math.random() * (max - min) + min;
 
-console.log(random(20, 99));
+console.log(random(20, 99).toFixed(2));
