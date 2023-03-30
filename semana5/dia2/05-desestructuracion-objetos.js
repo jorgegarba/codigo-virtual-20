@@ -18,6 +18,7 @@ const producto2 = { ...producto };
  */
 
 const { codigo, precio, ...rest } = producto;
+
 console.log('codigo', codigo);
 console.log('precio', precio);
 console.log('rest', rest);
@@ -38,8 +39,8 @@ const random = (atributos) => {
 };
 
 let maxYMin = {
-	max: 200,
-	min: 100
+	min: 100,
+	max: 200
 };
 
 console.log(random(maxYMin));
