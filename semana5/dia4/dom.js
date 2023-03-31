@@ -63,8 +63,8 @@ const inputLastname=document.getElementsByClassName("input_lastname")
 inputLastname[0].style.color= "red";
 
 
-const input2= document.querySelectorAll('input')
-console.log("query",input2)
+// const input2= document.querySelectorAll('input')
+// console.log("query",input2)
 
 
 
