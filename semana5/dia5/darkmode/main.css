@@ -1,0 +1,56 @@
+
+:root{
+    --clr-bcg:#fff;
+    --clr-font:#282c35;
+    --clr-primary:#d23669;
+    --clr-grey:#64748b;
+}
+
+
+.dark-theme{
+    --clr-bcg:#282c35;
+    --clr-font:#fff;
+    --clr-primary:#ffa7c4;
+    --clr-grey:#cbd5e1; 
+    --clr-red: red;  
+}
+
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--clr-bcg);
+    color: var(--clr-font);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    transition: all 0.3s linear;
+}
+
+.nav-center{
+    width: 90vw;
+    max-width: 600px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.nav-center span{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: var(--clr-primary);
+}
+
+.btn{
+    background: var(--clr-grey);
+    color: var(--clr-bcg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    border-color: transparent;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}

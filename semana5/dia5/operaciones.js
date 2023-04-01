@@ -22,3 +22,13 @@ function multiplicar(numero1,numero2){
 
 }
 
+function dividir (numero1,numero2){
+    if(+numero2 === 0){
+      //terminha ala ejecucio de una funcion
+        return "Error: no se puede dividir por 0"
+    }
+    const calcDivision = +numero1 / + numero2;
+    
+    return validarSiEsNumero(calcDivision,"dividir")
+
+}
