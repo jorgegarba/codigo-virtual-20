@@ -45,9 +45,26 @@ const getPeliculasByCategoria = (name) => {
 
 const id = 2;
 
-getCategoriaById(id).then((categoria) => {
-	console.log(categoria, 'categoria');
-	getPeliculasByCategoria(categoria).then((pelis) => {
-		console.log(pelis, 'pelis');
+getCategoriaById(id)
+	.then((categoria) => {
+		console.log(categoria, 'categoria');
+		getPeliculasByCategoria(categoria).then((pelis) => {
+			console.log(pelis, 'pelis');
+		});
+	})
+	.catch((error) => {
+		console.log('error', error);
 	});
-});
+
+// Forma 2 de encadenar promesas
+
+getCategoriaById(id)
+	.then((nombreDeCategoria) => {
+		return getPeliculasByCategoria(nombreDeCategoria);
+	})
+	.then((pelisEncontradas) => {
+		console.log('pelisEncontradas', pelisEncontradas);
+	})
+	.catch((errorGenerico) => {
+		console.log('errorGenerico', errorGenerico);
+	});
