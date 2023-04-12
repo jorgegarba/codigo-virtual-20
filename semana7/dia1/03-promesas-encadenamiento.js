@@ -68,3 +68,13 @@ getCategoriaById(id)
 	.catch((errorGenerico) => {
 		console.log('errorGenerico', errorGenerico);
 	});
+
+// Forma 3, en una función async usando await
+
+const caller = async () => {
+	const nombreCat = await getCategoriaById(1);
+	const pelis = await getPeliculasByCategoria(nombreCat);
+	console.log('final', pelis);
+};
+
+caller();

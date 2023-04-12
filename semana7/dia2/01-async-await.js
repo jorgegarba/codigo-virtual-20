@@ -4,12 +4,17 @@ axios.get('https://reqres.in/api/users/2').then((response) => {
 
 async function getUser() {
 	const response = await axios.get('https://reqres.in/api/users/2');
-	console.log(response);
+	return response.data;
 }
-getUser();
+getUser().then((data) => {
+	console.log('data getUser', data);
+});
 
 const getUserV2 = async () => {
 	const response = await axios.get('https://reqres.in/api/users/2');
-	console.log(response);
+	return response.data;
 };
-getUserV2();
+
+getUserV2().then((data) => {
+	console.log('data getUserV2', data);
+});
