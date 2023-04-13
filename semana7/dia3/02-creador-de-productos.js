@@ -8,7 +8,10 @@ const crearProducto = async (producto) => {
 	const URL = 'https://64376df80c58d3b145712b2c.mockapi.io/producto';
 	const response = await fetch(URL, {
 		method: 'POST',
-		body: JSON.stringify(producto)
+		body: JSON.stringify(producto),
+		headers: {
+			'Content-Type': 'application/json'
+		}
 	});
 	const data = await response.json();
 	console.log('data', data);
