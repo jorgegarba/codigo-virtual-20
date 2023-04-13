@@ -9,6 +9,9 @@ const crearProducto = async (producto) => {
 	const response = await fetch(URL, {
 		method: 'POST',
 		body: JSON.stringify(producto),
+		// cuando incluimos información en el body, debemos especificar en los headers
+		// el tipo de datos que enviamos en el body. así el servidor podrá desserializar
+		// correctamente la info enviada, porque podría ser un JSON o una imagen o un XML etc
 		headers: {
 			'Content-Type': 'application/json'
 		}
