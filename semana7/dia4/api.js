@@ -37,6 +37,8 @@ const githubActionSearch = document.querySelector("#github-action-search")
 const githubInputSearch = document.querySelector("#github-search")
 
 
+//evento onclick del bton
+
 githubActionSearch.onclick=()=>{
     const username = githubInputSearch.value;
 
@@ -49,27 +51,50 @@ githubActionSearch.onclick=()=>{
         });
         return;
     }
-    obtenerDatosGithub()
+    obtenerDatosGithub(username)
+}
+
+
+
+
+//vamos detectar el evento de enter cuano este en el input(este es otro evento - keyup)
+
+githubInputSearch.addEventListener("keyup",function(event){
+    if(event.key=="Enter"){
+        obtenerDatosGithub(event.target.value)
+    }
+
+});
+
+
+//es la funcion fecth que consume el Api
+
+
+const obtenerDatosGithub = async (username="guillermosifu") => {
+  // ene ste ejemplio await esta haciendo lo sgte
+  const response = await fetch(`https://api.github.com/users/${username}`);
+  const data = await response.json();
+
+  setDataUser(data)
+};
+
+
+
+
+
+
+
+//es una funcion que alamacena los datos a cambiar 
+
+const setDataUser =(data)=>{
+    imageProfile.src= data.avatar_url;
+    githubName.innerHTML =data.name;
+    githubUsername.innerHTML=`@${data.login}`;
 }
 
 
 
 
 
-
-
-
-
-
-
-
-const obtenerDatosGithub = async () => {
-  // ene ste ejemplio await esta haciendo lo sgte
-
-  const response = await fetch("https://api.github.com/users/guillermosifu");
-  const data = await response.json();
-
-  console.log(data);
-};
 
 obtenerDatosGithub();
