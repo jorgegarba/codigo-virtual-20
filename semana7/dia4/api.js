@@ -74,6 +74,16 @@ const obtenerDatosGithub = async (username="guillermosifu") => {
   // ene ste ejemplio await esta haciendo lo sgte
   const response = await fetch(`https://api.github.com/users/${username}`);
   const data = await response.json();
+ //data mesaage de error cuando el usario no existe 
+ //su valor sea not found 
+  if(data.message === "Not Found"){
+    Swal.fire({
+        title:"Error",
+        text:"No existe el usuario",
+        icon:"error"
+    })
+  }
+
 
   setDataUser(data)
 };
