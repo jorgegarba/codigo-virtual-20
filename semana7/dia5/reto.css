@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(./background_poke.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.text-title{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.title-principal{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.link{
+    cursor: pointer;
+}

@@ -5,13 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./reto.css">
     <title>pokemon</title>
 </head>
 <body>
     <section class="container mt-5 mb-5 ">
         <div class="row" id="row-pokemons">
             <div class="col-md-12">
-                <img src="./poke_fondo.png" alt="" width="400">
+                <img src="./poke_fondo.png" class="img-fluid mx-auto d-block rounded" alt="" width="400">
+            </div>
+        </div>
+          <!-- Este sera el modal -->
+          <div class="modal fade" id="modalPokemon" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center text-capitalize">
+                        <h2 id="pokemon-name">Pokemon</h2>
+                        <img src="" alt="" id="pokemon-img" class="img-fluid mx-auto d-block rounded">
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-items-start text-center">
+                            <div class="col border-end">
+                                <span>Peso:</span> 
+                            </div>
+                            <div class="col border-end">
+                                <span>Habilidades:</span>
+                            </div>
+                            <div class="col">
+                                <span>Tipo:</span>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <br>
+
+                    <div class="container">
+                        <div class="row align-items-start text-center">
+                            <div class="col border-end">
+                                <span class=""><span id="pokemon_peso"></span>&nbsp;KG</span>
+                            </div>
+                            <div class="col border-end">
+                                <p>
+                                <span id="pokemon_habilidad1"></span> ,
+                                <span id="pokemon_habilidad2"></span>
+                            </p>
+                            </div>
+                            <div class="col">                           
+                                <span id="pokemon_tipo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

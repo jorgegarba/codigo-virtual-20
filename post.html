@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar datos de un input</title>
+  </head>
+  <body>
+    <form id="form_register">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="tile" />
+      </div>
+      <div>
+        <label for="body">Body</label>
+        <input type="text" id="body" name="body" />
+      </div>
+      <div>
+        <label for="body">User</label>
+        <select name="user" id="userId">
+          <option value="">---</option>
+          <option value="1">User 1</option>
+          <option value="2">User 2</option>
+          <option value="3">User 3</option>
+        </select>
+      </div>
+      <div>
+        <button id="btn_register">Enviar</button>
+        <button type="button">Cancelar</button>
+      </div>
+    </form>
+    <script src="./post.js"></script>
+  </body>
+</html>
