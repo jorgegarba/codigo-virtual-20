@@ -4,10 +4,11 @@ function Articulo(props) {
 	const { titulo, imagen, desc } = props.info;
 
 	return (
-		<div>
+		<div className="articulo">
 			<h3>{titulo}</h3>
 			<img src={imagen} alt="" />
 			<p>{desc}</p>
+			<button className="btn btn-outline-primary">Ver mas</button>
 		</div>
 	);
 }

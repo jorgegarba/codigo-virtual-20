@@ -7,3 +7,13 @@ export const getNameAndAbilities = (pokemon) => {
 	};
 	return result;
 };
+
+export const saludar = () => console.log('buenas noches!');
+
+const suma = (a, b) => a + b;
+/**
+ * - Export default, exporta una función o variable
+ * por defecto por archivo
+ * - Por archivo se permite máximo 1 exportación por defecto.
+ */
+export default suma;

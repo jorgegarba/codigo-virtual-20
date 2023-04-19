@@ -17,12 +17,28 @@ function Principal() {
 		desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, fuga explicabo porro mollitia quibusd'
 	};
 
+	const articulos = [articulo1, articulo2, articulo3];
+
+	// crear un arreglo de componentes articulo con cada articulo independiente
+	const resultado = articulos.map((art) => {
+		return <Articulo info={art} />;
+	});
+
+	const elemento = [
+		<Articulo info={articulo1} />,
+		<Articulo info={articulo2} />
+	];
+
 	return (
 		<div>
 			<h2>Articulos detallados</h2>
+
+			{resultado}
+
 			<Articulo info={articulo1} />
 			<Articulo info={articulo2} />
 			<Articulo info={articulo3} />
+			{elemento}
 		</div>
 	);
 }
