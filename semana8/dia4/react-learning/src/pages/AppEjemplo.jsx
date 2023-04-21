@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../components/Header";
 
 
 const AppEjemplo = () => {
@@ -22,7 +21,7 @@ const AppEjemplo = () => {
   return (
     
     <div className="App">
-      <Header/>
+   
       <div className="container">
         <h1>Buscador de Usuarios</h1>
         <div className="grid">
