@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.card-pokemon{
+max-width: 300px;
+min-height: 400px;
+max-height: 400px;
+}
+
+.title-pokemon{
+text-align: center;
+margin: 20px;
+}
+
+.name-pokemon{
+text-transform: uppercase;
+text-align: center;
+
+}
+
+.img-pokemon{
+  min-height: 250px;
+  max-height: 250px;
+  object-fit: contain !important ;
+}
