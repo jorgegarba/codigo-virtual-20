@@ -26,7 +26,7 @@ const FormUser = () => {
       <form>
         <h4>Formulario de Registro</h4>
         <h5>Nombre :{valorDeInputs.nombre}</h5>
-        <h5>Apellido</h5>
+        <h5>Apellido:{valorDeInputs.apellido}</h5>
         <h5>Correo</h5>
         <h5>Password</h5>
         <p>
@@ -40,6 +40,7 @@ const FormUser = () => {
         </p>
         <p>
           <TextField
+           onChange={handleInputvalues}
             type="text"
             variant="outlined"
             label="ingrese su apellido"

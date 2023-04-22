@@ -10,6 +10,7 @@ import AppEjemplo from "../pages/AppEjemplo";
 import Nosotros from "../pages/Nosotros";
 import Header from "../components/Header";
 import FormUser from "../components/FormUser";
+import Pokemon from "../pages/Pokemon";
 
 
 
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/contacto" element={<Contacto/>}/>
         <Route path="/nosotros" element={<Nosotros/>}/>
         <Route path="/formulario" element={<FormUser/>}/>
+        <Route path="/pokemon" element={<Pokemon/>}/>
       </Routes>
     </BrowserRouter>
   );
