@@ -9,6 +9,7 @@ import Contacto from "../pages/Contacto";
 import AppEjemplo from "../pages/AppEjemplo";
 import Nosotros from "../pages/Nosotros";
 import Header from "../components/Header";
+import FormUser from "../components/FormUser";
 
 
 
@@ -22,6 +23,7 @@ const Router = () => {
         <Route path="/home" element={<Home/>} />
         <Route path="/contacto" element={<Contacto/>}/>
         <Route path="/nosotros" element={<Nosotros/>}/>
+        <Route path="/formulario" element={<FormUser/>}/>
       </Routes>
     </BrowserRouter>
   );
