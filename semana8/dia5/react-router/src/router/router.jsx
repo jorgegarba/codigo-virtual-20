@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import Contacto from "../pages/Contacto";
 import AppEjemplo from "../pages/AppEjemplo";
 import Nosotros from "../pages/Nosotros";
+import Header from "../components/Header";
 
 
 
@@ -15,6 +16,7 @@ const Router = () => {
   //como esti es un compomente tenemos que usar el return para poder crear las rutas
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path="/" element={<AppEjemplo/>}/>
         <Route path="/home" element={<Home/>} />
