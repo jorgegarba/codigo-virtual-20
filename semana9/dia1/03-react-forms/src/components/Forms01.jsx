@@ -11,23 +11,39 @@ const Forms01 = () => {
 	const [formulario, setFormulario] = useState({
 		edad: 0,
 		nacionalidad: 'pe',
-		genero: 'f'
+		genero: 'f',
+		html: false,
+		js: false,
+		css: false
 	});
-	console.log(formulario);
 
 	const handleChange = (e) => {
-		console.log(e);
 		setFormulario({
 			...formulario,
-			[e.target.name]: e.target.value
+			// [e.target.name]: e.target.value
+			[e.target.name]:
+				e.target.type === 'checkbox' ? e.target.checked : e.target.value
 		});
+	};
+
+	// const handleLenguajes = (e) => {
+	// 	setFormulario({
+	// 		...formulario,
+	// 		[e.target.name]: e.target.checked
+	// 	});
+	// };
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('mandando formulario');
+		console.log(formulario);
 	};
 
 	return (
 		<div className="container">
 			<div className="row">
 				<div className="col-md-6">
-					<form>
+					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
 							<label htmlFor="input-edad" className="form-label">
 								Edad:
@@ -88,6 +104,48 @@ const Forms01 = () => {
 								</label>
 							</div>
 						</div>
+						<div className="mb-3">
+							<div className="form-check">
+								<input
+									className="form-check-input"
+									type="checkbox"
+									id="check-html"
+									name="html"
+									onChange={handleChange}
+									// checked={formulario.html}
+								/>
+								<label className="form-check-label" htmlFor="check-html">
+									HTML
+								</label>
+							</div>
+							<div className="form-check">
+								<input
+									className="form-check-input"
+									type="checkbox"
+									id="check-js"
+									name="js"
+									onChange={handleChange}
+									// checked={formulario.js}
+								/>
+								<label className="form-check-label" htmlFor="check-js">
+									JS
+								</label>
+							</div>
+							<div className="form-check">
+								<input
+									className="form-check-input"
+									type="checkbox"
+									id="check-css"
+									name="css"
+									onChange={handleChange}
+									// checked={formulario.css}
+								/>
+								<label className="form-check-label" htmlFor="check-css">
+									CSS
+								</label>
+							</div>
+						</div>
+						<button type="submit">Crear registro</button>
 					</form>
 				</div>
 			</div>
