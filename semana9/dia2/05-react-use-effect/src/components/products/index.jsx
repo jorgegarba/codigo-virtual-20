@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { URL_API_STORE } from '../../constants';
 import { useEffect, useState } from 'react';
+import Product from '../product';
 
 const Products = () => {
 	const [productos, setProductos] = useState([]);
@@ -20,7 +21,17 @@ const Products = () => {
 		getProducts();
 	}, [limit]);
 
-	return <div></div>;
+	return (
+		<div className="row">
+			{productos.map((prod) => {
+				return (
+					<div className="col-md-3" key={prod.id}>
+						<Product item={prod} />
+					</div>
+				);
+			})}
+		</div>
+	);
 };
 
 export default Products;

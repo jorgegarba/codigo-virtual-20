@@ -1,0 +1,16 @@
+.product-image {
+	height: 10rem;
+	object-fit: contain;
+}
+
+.product-description {
+	max-height: calc(1.5rem * 3);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.product-title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
