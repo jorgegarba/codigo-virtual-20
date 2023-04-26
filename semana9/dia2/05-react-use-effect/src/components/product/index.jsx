@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const Product = (props) => {
-	const { item } = props;
+	const { item, agregarAlCarrito } = props;
 
 	return (
 		<div className="card">
@@ -15,13 +15,22 @@ const Product = (props) => {
 					{item.description}
 				</p>
 				<button className="btn btn-sm btn-primary">Ver producto</button>
+				<button
+					className="btn btn-sm btn-warning"
+					onClick={() => {
+						agregarAlCarrito(item);
+					}}
+				>
+					agregar
+				</button>
 			</div>
 		</div>
 	);
 };
 
 Product.propTypes = {
-	item: PropTypes.object.isRequired
+	item: PropTypes.object.isRequired,
+	agregarAlCarrito: PropTypes.func.isRequired
 };
 
 export default Product;
