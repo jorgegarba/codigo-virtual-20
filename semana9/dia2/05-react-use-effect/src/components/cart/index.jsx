@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const Cart = (props) => {
-	const { carrito } = props;
+	const { carrito, eliminarDelCarrito } = props;
 
 	return (
 		<ul className="list-group">
@@ -20,6 +20,12 @@ const Cart = (props) => {
 							<div className="d-flex justify-content-between">
 								<p>{product.cant}</p>
 								<p>S/ {product.cant * product.price}</p>
+								<button
+									className="btn btn-outline-danger"
+									onClick={() => eliminarDelCarrito(product.id)}
+								>
+									<i className="fa-solid fa-trash"></i>
+								</button>
 							</div>
 						</div>
 					</li>
@@ -30,7 +36,8 @@ const Cart = (props) => {
 };
 
 Cart.propTypes = {
-	carrito: PropTypes.arrayOf(PropTypes.object).isRequired
+	carrito: PropTypes.arrayOf(PropTypes.object).isRequired,
+	eliminarDelCarrito: PropTypes.func.isRequired
 };
 
 export default Cart;
