@@ -7,7 +7,7 @@ export const UserContext = createContext();
 //componentes que esten dentro del componente contextCarrito
 
 
-const ContextCarrito=({children})=>{
+export const ContextCarrito=({children})=>{
     //se destructura el custom hook para obtner las funciones y variables 
     const{agregarAlCarrito,carrito,eliminarDelCarrito}=useCarrito();
 
