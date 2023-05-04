@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-form-stepper": "^2.0.3",
     "react-hook-form": "^7.43.9"
   },
   "devDependencies": {
