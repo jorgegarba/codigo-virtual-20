@@ -9,7 +9,7 @@ function App() {
 
   const handleEmployee = ({ employeeName, discount, salary }) => {
     const newEmployee = {
-      id: new Date().getTime.toString(),
+      id: new Date().getTime().toString(),
       employeeName,
       discount,
       salary,
@@ -18,22 +18,24 @@ function App() {
   };
 
   const handleDeleteEmployee = (id) => {
-    const updateEmployee = employees.filter((employee) => employee.id !== id);
-    setEmployees(updateEmployee);
+    const updatedEmployees = employees.filter((employee) => employee.id !== id);
+    setEmployees(updatedEmployees);
   };
 
   return (
     <div className="App">
       <div className="addDiscount">
-        <span>Calculando mis Descuentos</span>
-        <EmployeeForm onAddEmployee={handleEmployee}/>
+        <span className="title">Calculando Mis Descuentos</span>
+
+        <EmployeeForm onAddEmployee={handleEmployee} />       
+        
       </div>
       <div className="discounts">
         <EmployeeList
-        setEmployees={setEmployees}
-        employees={employees}
-        onDeleteEmployee={handleDeleteEmployee}/>
-
+          setEmployees={setEmployees}
+          employees={employees}
+          onDeleteEmployee={handleDeleteEmployee}
+        />
       </div>
     </div>
   );

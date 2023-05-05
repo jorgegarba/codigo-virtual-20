@@ -21,30 +21,40 @@ const EmployeeForm = ({onAddEmployee}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Nombre de Empleado</label>
-      <Input type="text" placeholder="ingrese el nolmbre de empleado" 
-       variant="outlined"
-        id="employeName" 
-        value={employeeName}
-         onChange={(event)=>setEmployeeName(event.target.value)}/>
-      <label>Descuento</label>
-      <Input type="number" placeholder="ingrese el descuento" 
-       variant="outlined"
-        id="discount" 
-        value={discount}
-         onChange={(event)=>setDiscount(event.target.value)}/>
-         <label >Salario</label>
-         <Input type="number" placeholder="ingrese el Salario" 
-       variant="outlined"
-        id="salary" 
-        value={salary}
-         onChange={(event)=>setSalary(event.target.value)}/>
-
-         <button type="submit">Agregar Empleado</button>
-
-    </form>
-  );
+    <form onSubmit={handleSubmit} className="form">
+    <label htmlFor="employeeName">Nombre del empleado</label>
+    <Input
+      variant="outlined"
+      color="primary"
+      type="text"
+      id="employeeName"
+      value={employeeName}
+      onChange={(event) => setEmployeeName(event.target.value)}
+      placeholder="Ingrese el nombre del empleado"
+    
+    />
+    <label htmlFor="discount">Descuento</label>
+    <Input
+      type="number"
+      id="discount"
+      value={discount}
+      onChange={(event) => setDiscount(event.target.value)}
+      placeholder="Ingrese el descuento"
+     
+    />
+    <label htmlFor="salary">Salario</label>
+    <Input
+      type="number"
+      id="salary"
+      value={salary}
+      onChange={(event) => setSalary(event.target.value)}
+      placeholder="Ingrese el salario"
+    
+    />
+    <button type="submit">Agregar empleado</button>
+  </form>
+);
 };
 
 export default EmployeeForm;
+

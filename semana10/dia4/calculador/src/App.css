@@ -1,42 +1,318 @@
-#root {
-  max-width: 1280px;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* APP STYLES */
+
+.App {
+  min-width: 1250px;
+  /* max-width: 1500px; */
+  min-height: 100vh;
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  display: flex;
+  justify-content: center;
+}
+
+.addDiscount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  width: auto;
+}
+
+.discounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  max-height: 100vh;
+}
+
+
+.title {
+  /* margin: ; */
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: .2px;
+}
+
+.clock {
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.time {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 2.5rem;
+  box-shadow: -10px -10px 30px #fff, 10px 10px 30px #192346;
+ 
+}
+.time {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 60vmin;
+  border-radius: 10px;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #000, #fff);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+
+ 
+}
+ @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #181616;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form {
+  width: 20rem;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  box-shadow: -10px -10px 30px #fff, 10px 10px 30px #babecc;
+  padding: 20px;
+}
+
+
+.form label {
+  margin-bottom: 5px;
+}
+
+.form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all;
+  transition-duration: .1s;
+}
+
+.form button:hover {
+  background-color: #223535;
+}
+
+form > label{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000cc;
+}
+
+.name-employer {
+  text-transform: capitalize;
+}
+
+.employee {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.employee:hover {
+  transform: scale(1.005);
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); */
+}
+
+.employee h3 {
+  margin-top: 0px;
+}
+
+.employee p {
+  margin-bottom: 5px;
+}
+
+.discount-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.discount-form label {
+  margin-bottom: 5px;
+}
+
+.discount-form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.discount-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.discount-form button:hover {
+  background-color: #008080;
+}
+
+footer{
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  border: solid 5px  #008080;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+span{
+  font-size: 25px;
+  font-weight: bold;
+  color: #008080;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+form > label {
+  display: flex;
+  flex-direction: column;
+} 
+
+.btn-form {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.list-none-employer {
+  color: gray;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+}
+/* EMPLOYEE LIST */
+
+.employee-list {
+  background-color: #fff;
+  border-radius: 20px; 
+  box-shadow: -10px -10px 30px #fff, 10px 10px 30px #babecc; 
+  padding: 1rem 0 1.5rem 0;
+  position: relative;
+  min-height: 90vh;
+  max-height: 90vh;
+  max-width: 90%;
+  min-width: 95%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1250px) {
+  body {
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    padding: 0 0 2rem 0;
+  }
+
+  .addDiscount {
+    gap: 2rem;
+  }
+
+  .discounts {
+    width: 90%;
+  }
+
+  .employee-list {
+    padding: .5rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (min-height: 780px) {
+  .addDiscount {
+    justify-content: space-around;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .form {
+    display: flex;
+     flex-direction: column;
+    justify-content: space-around;
+    height: 45%;
+  }
+  .title {
+    font-size: 30px;
+  }
 }
