@@ -5,15 +5,15 @@ export const UserContext = createContext();
 export const UserProviderLogin = ({ children }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
-  const storeUser = () => {
+  const storeUser = (dataUser) => {
     localStorage.setItem("user", JSON.stringify(dataUser));
     setUser(dataUser);
   };
 
   return(
-    <UserProviderLogin value={{user,storeUser}}>
+    <UserContext.Provider value={{user,storeUser}}>
         {children}
-    </UserProviderLogin>
+    </UserContext.Provider>
   )
 
 };
