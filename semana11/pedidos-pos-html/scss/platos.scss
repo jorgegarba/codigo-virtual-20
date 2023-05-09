@@ -1,0 +1,28 @@
+hr {
+  height: 1px;
+  background-color: lighten($color: $fondo, $amount: 20%);
+  border: none;
+  width: 90%;
+  margin: auto;
+}
+.categorias {
+  flex: 1;
+  border: 1px solid darken($color: $color-texto, $amount: 50%);
+  display: flex;
+  flex-direction: column;
+}
+.categorias__titulo {
+  // min-height: 50px;
+  color: white;
+  text-align: center;
+  h1 {
+    padding: 20px 0px;
+  }
+}
+.categorias__formulario {
+  // flex: 1;
+  padding-bottom: 50px;
+}
+.categorias__tabla {
+  flex: 1;
+}

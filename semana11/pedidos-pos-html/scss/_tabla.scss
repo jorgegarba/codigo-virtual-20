@@ -1,0 +1,33 @@
+.tabla {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+  thead {
+    border-bottom: 1px solid #bbb;
+    background-color: $fondo;
+    color: white;
+    tr {
+      display: flex;
+      padding: 10px 0;
+    }
+    th {
+      flex: 1;
+    }
+  }
+  tbody {
+    tr {
+      display: flex;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+    td {
+      flex: 1;
+    }
+  }
+}
