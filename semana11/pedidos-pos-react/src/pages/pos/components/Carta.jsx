@@ -12,7 +12,12 @@ const Carta = () => {
 	return (
 		<div className="carta">
 			<h3>
-				Lista de Platos Categoria: &nbsp;
+				{categoriaSeleccionada.nombre ? (
+					<>Lista de Platos Categoria: &nbsp;</>
+				) : (
+					'Seleccione una categoría del menú de la izquierda'
+				)}
+
 				<span className="color-secundario">
 					{categoriaSeleccionada.nombre.toUpperCase()}
 				</span>

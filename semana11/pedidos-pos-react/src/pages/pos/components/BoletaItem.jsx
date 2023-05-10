@@ -1,18 +1,25 @@
-const BoletaItem = () => {
+import PropTypes from 'prop-types';
+
+const BoletaItem = (props) => {
+	const { platoObj } = props;
 	return (
 		<li className="comanda__item">
 			<p className="comanda__nombre">
 				<span>
-					<strong>Arroz Chaufa de Pollo</strong>
+					<strong>{platoObj.nombre}</strong>
 				</span>
-				<span>Precio: S/ 35.00</span>
+				<span>Precio: S/ {platoObj.precio}</span>
 			</p>
-			<p className="comanda__cantidad">01</p>
+			<p className="comanda__cantidad">{platoObj.cantidad}</p>
 			<p className="comanda__precio">
-				<strong>S/ 35.00</strong>
+				<strong>S/ {platoObj.precio * platoObj.cantidad}</strong>
 			</p>
 		</li>
 	);
+};
+
+BoletaItem.propTypes = {
+	platoObj: PropTypes.object.isRequired
 };
 
 export default BoletaItem;

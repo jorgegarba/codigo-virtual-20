@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { PosContext } from '../context/PosState';
 
 const Plato = (props) => {
 	const { platoObj } = props;
+	const { agregarPlato } = useContext(PosContext);
 
 	return (
 		<div className="carta__plato">
@@ -10,7 +13,12 @@ const Plato = (props) => {
 			<span className="carta__precio">S/ {platoObj.precio}</span>
 			<div className="carta__botones">
 				<button className="boton boton-outline-primary boton-restar">-1</button>
-				<button className="boton boton-outline-primary boton-sumar">+1</button>
+				<button
+					className="boton boton-outline-primary boton-sumar"
+					onClick={() => agregarPlato(platoObj.id)}
+				>
+					+1
+				</button>
 			</div>
 		</div>
 	);

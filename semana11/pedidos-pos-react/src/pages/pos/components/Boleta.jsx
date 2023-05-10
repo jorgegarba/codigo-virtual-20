@@ -1,9 +1,31 @@
 import { useContext } from 'react';
 import { PosContext } from '../context/PosState';
 import BoletaItem from './BoletaItem';
+import { getPlatoByPlatoId } from '../utils';
 
 const Boleta = () => {
-	const { mesaSeleccionada } = useContext(PosContext);
+	const { mesaSeleccionada, pedidos } = useContext(PosContext);
+
+	/**
+	 * [
+	 *  {id:1,nombre:"chaufa",cantidad:6,precio:20,url:"https://www..."}
+	 * ]
+	 */
+	let platosActuales = [];
+	if (mesaSeleccionada.nro) {
+		const pedidoMesaActual = pedidos.find(
+			(pedido) => pedido.mesaId === mesaSeleccionada.id
+		);
+		if (pedidoMesaActual) {
+			platosActuales = pedidoMesaActual.platos.map((plato) => {
+				return {
+					...plato,
+					...getPlatoByPlatoId(plato.platoId)
+				};
+			});
+			console.log('platosActuales', platosActuales);
+		}
+	}
 
 	return (
 		<div className="boleta">
@@ -18,10 +40,9 @@ const Boleta = () => {
 				<hr />
 
 				<ul className="comanda__lista">
-					<BoletaItem />
-					<BoletaItem />
-					<BoletaItem />
-					<BoletaItem />
+					{platosActuales.map((plato, i) => {
+						return <BoletaItem key={i} platoObj={plato} />;
+					})}
 				</ul>
 				<button className="boton boton-success boton-block">PAGAR</button>
 			</div>
