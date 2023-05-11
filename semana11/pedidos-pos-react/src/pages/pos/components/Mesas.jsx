@@ -1,14 +1,22 @@
-import { mesasArray } from '../../../mock/fakeData';
+import { useContext } from 'react';
 import Mesa from './Mesa';
+import { PosContext } from '../context/PosState';
 
 const Mesas = () => {
-	// TODO obtener las mesas de la API de POS
+	const {
+		mesasAPI: { data: mesasArray, cargandoMesas }
+	} = useContext(PosContext);
+
 	return (
 		<div className="mesas">
 			<ul className="mesas__lista">
-				{mesasArray.map((mesaObj, i) => (
-					<Mesa key={i} id={mesaObj.id} nro={mesaObj.nro} />
-				))}
+				{cargandoMesas ? (
+					<div>cargando...</div>
+				) : (
+					mesasArray.map((mesaObj, i) => (
+						<Mesa key={i} id={mesaObj.id} nro={mesaObj.nro} />
+					))
+				)}
 			</ul>
 			<div className="mesas__info"></div>
 		</div>

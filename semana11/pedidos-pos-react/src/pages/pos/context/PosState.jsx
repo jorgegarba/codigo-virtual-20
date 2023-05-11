@@ -1,6 +1,8 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import { getMesas } from '../../../services/mesasService';
+import { useMesas } from '../../../hooks/useMesas';
+import { useCategorias } from '../../../hooks/useCategorias';
+import { usePlatos } from '../../../hooks/usePlatos';
 
 export const PosContext = createContext();
 
@@ -12,7 +14,10 @@ const PosState = (props) => {
 		id: 0,
 		nombre: ''
 	});
-	const [mesas, setMesas] = useState([]);
+
+	const { mesas, cargandoMesas } = useMesas();
+	const { categorias, cargandoCategorias } = useCategorias();
+	const { platos, cargandoPlatos } = usePlatos();
 
 	/**
 	 *[
@@ -89,12 +94,6 @@ const PosState = (props) => {
 		}
 	};
 
-	useEffect(() => {
-		getMesas().then((data) => {
-			setMesas(data);
-		});
-	}, []);
-
 	return (
 		<PosContext.Provider
 			value={{
@@ -103,7 +102,16 @@ const PosState = (props) => {
 				categoriaSeleccionada: categoriaSeleccionada,
 				setCategoriaSeleccionada: setCategoriaSeleccionada,
 				pedidos: pedidos,
-				modificarPedido: modificarPedido
+				modificarPedido: modificarPedido,
+				mesasAPI: { data: mesas, cargandoMesas: cargandoMesas },
+				categoriasAPI: {
+					data: categorias,
+					cargandoCategorias: cargandoCategorias
+				},
+				platosAPI: {
+					data: platos,
+					cargandoPlatos: cargandoPlatos
+				}
 			}}
 		>
 			{children}

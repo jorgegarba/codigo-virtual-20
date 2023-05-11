@@ -1,5 +1,5 @@
-import { platosArray } from '../../mock/fakeData';
-
-export const getPlatoByPlatoId = (platoId) => ({
-	...platosArray.find((plato) => plato.id === platoId)
-});
+export const getPlatoByPlatoId = (platoId, platosArray) => {
+	return {
+		...platosArray.find((plato) => plato.id === platoId)
+	};
+};

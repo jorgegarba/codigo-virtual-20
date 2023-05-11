@@ -4,7 +4,11 @@ import BoletaItem from './BoletaItem';
 import { getPlatoByPlatoId } from '../utils';
 
 const Boleta = () => {
-	const { mesaSeleccionada, pedidos } = useContext(PosContext);
+	const {
+		mesaSeleccionada,
+		pedidos,
+		platosAPI: { data: platos }
+	} = useContext(PosContext);
 
 	/**
 	 * [
@@ -20,7 +24,7 @@ const Boleta = () => {
 			platosActuales = pedidoMesaActual.platos.map((plato) => {
 				return {
 					...plato,
-					...getPlatoByPlatoId(plato.platoId)
+					...getPlatoByPlatoId(plato.platoId, platos)
 				};
 			});
 			console.log('platosActuales', platosActuales);

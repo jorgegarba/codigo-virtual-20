@@ -1,12 +1,7 @@
-import PosPage from './pages/pos';
-import PosState from './pages/pos/context/PosState';
+import AppRouter from './routes/AppRouter';
 
 const App = () => {
-	return (
-		<PosState>
-			<PosPage />
-		</PosState>
-	);
+	return <AppRouter />;
 };
 
 export default App;

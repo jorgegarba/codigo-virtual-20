@@ -42,16 +42,3 @@ export const platosArray = [
 		url: 'https://w7.pngwing.com/pngs/736/456/png-transparent-peruvian-cuisine-anticucho-ceviche-choritos-a-la-chalaca-food-holiday-atmosphere-seafood-recipe-cuisine.png'
 	}
 ];
-
-export const categoriasArray = [
-	{ id: 1, nombre: 'fondos' },
-	{ id: 2, nombre: 'bebidas' },
-	{ id: 3, nombre: 'entradas' }
-];
-
-export const mesasArray = [
-	{ id: 1, nro: '01' },
-	{ id: 2, nro: '02' },
-	{ id: 3, nro: '03' },
-	{ id: 4, nro: '04' }
-];
