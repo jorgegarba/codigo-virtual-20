@@ -1,19 +1,21 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { postLogin } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthState';
 
 const Login = () => {
+	const { guardarToken } = useContext(AuthContext);
 	const navigate = useNavigate();
 	const [form, setForm] = useState({
-		username: 'mor_2314',
-		password: '83r5^_'
+		email: 'john@mail.com',
+		password: 'changeme'
 	});
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		postLogin(form).then((data) => {
-			if (data.token) {
-				navigate('/admin/pos');
+			if (data.access_token) {
+				guardarToken(data.access_token);
 			}
 		});
 	};
@@ -25,10 +27,10 @@ const Login = () => {
 				<form className="formulario" onSubmit={handleSubmit}>
 					<label htmlFor="">Email:</label>
 					<input
-						name="username"
-						onChange={(e) => setForm({ ...form, username: e.target.value })}
-						value={form.username}
-						type="text"
+						name="email"
+						onChange={(e) => setForm({ ...form, email: e.target.value })}
+						value={form.email}
+						type="email"
 						className="formulario__input"
 						placeholder="Email"
 					/>

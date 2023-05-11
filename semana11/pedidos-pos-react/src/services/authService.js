@@ -9,3 +9,17 @@ export const postLogin = async (objeto) => {
 	});
 	return response.data;
 };
+
+export const getValidarSession = async () => {
+	const token = localStorage.getItem('token');
+	if (token) {
+		const response = await axios.get(`${URL_BACKEND_AUTH}/auth/profile`, {
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		});
+		return response.data;
+	} else {
+		throw 'no existe un token';
+	}
+};
